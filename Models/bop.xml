@@ -1,0 +1,15 @@
+<!-- A wrapper file for the Bird-of-Prey 3D model -->
+
+<PropertyList>
+ <path>bop.ac</path>
+
+ <animation>
+   <type>blend</type>
+   <object>all</object>
+   <property>/sim/multiplay/generic/float[0]</property>
+   <factor>1</factor>
+   <min>0</min>
+   <max>1</max>
+ </animation>
+
+</PropertyList>
