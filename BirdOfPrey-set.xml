@@ -35,10 +35,10 @@
   <view n="0">
    <internal archive="y">true</internal>
    <config>
-    <pitch-offset-deg>-5.0</pitch-offset-deg>
+    <pitch-offset-deg>-4.0</pitch-offset-deg>
     <x-offset-m archive="y">0</x-offset-m>
-    <y-offset-m archive="y">0</y-offset-m>
-    <z-offset-m archive="y">50</z-offset-m>
+    <y-offset-m archive="y">8.7</y-offset-m>
+    <z-offset-m archive="y">-45.6</z-offset-m>
    </config>
   </view>
 
@@ -48,15 +48,34 @@
     <name>c (lower case c) </name>
     <desc>Toggle Cloaking Device</desc>
    </key>
+   <key>
+    <name>Shift-F</name>
+    <desc>Toggle Wing Position</desc>
+   </key>
   </help>
 
   <multiplay>
     <generic>
        <float n="0"> 1.0 </float>
+       <float n="1"> 1.0 </float>
     </generic>
   </multiplay>
 
+  <systems>
+    <autopilot>
+      <path>Aircraft/BoP/Systems/fade_animation.xml</path>
+    </autopilot>
+    <autopilot>
+      <path>Aircraft/BoP/Systems/wing_animation.xml</path>
+    </autopilot>
+  </systems>
+
 </sim>
+
+ <BirdOfPrey>
+   <cloaking-command type="double">1.0</cloaking-command>
+   <wing-fold-command type="double">1.0</wing-fold-command>
+ </BirdOfPrey>
 
 
  <input>
@@ -67,7 +86,16 @@
      <desc>toggle cloaking</desc>
      <binding>
        <command>property-toggle</command>
-       <property>/sim/multiplay/generic/float[0]</property>
+       <property>BirdOfPrey/cloaking-command</property>
+     </binding>
+    </key>
+
+    <key n="70">
+     <name>Shift-F</name>
+     <desc>toggle wing position</desc>
+     <binding>
+       <command>property-toggle</command>
+       <property>BirdOfPrey/wing-fold-command</property>
      </binding>
     </key>
 

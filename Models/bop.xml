@@ -3,13 +3,60 @@
 <PropertyList>
  <path>bop.ac</path>
 
+
+ <!-- #####################   WING FOLD   #################### -->
+
+ <animation>
+   <type>rotate</type>
+   <object-name>LWing</object-name>
+   <property>/sim/multiplay/generic/float[1]</property>
+   <factor>30</factor>
+   <offset-deg>-30</offset-deg>
+   <center>
+     <x-m> 29.0 </x-m>
+     <y-m>  0.0 </y-m>
+     <z-m> 13.0 </z-m>
+   </center>
+   <axis>
+     <x>1</x>
+     <y>0</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>RWing</object-name>
+   <property>/sim/multiplay/generic/float[1]</property>
+   <factor>30</factor>
+   <offset-deg>-30</offset-deg>
+   <center>
+     <x-m> 29.0 </x-m>
+     <y-m>  0.0 </y-m>
+     <z-m> 13.0 </z-m>
+   </center>
+   <axis>
+     <x>-1</x>
+     <y>0</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+
+ <!-- #####################   CLOAKING DEVICE   #################### -->
+
  <animation>
    <type>blend</type>
-   <object>all</object>
+   <object>Fuselage</object>
+   <object>Bridge</object>
+   <object>Glass</object>
+   <object>LWing</object>
+   <object>RWing</object>
    <property>/sim/multiplay/generic/float[0]</property>
    <factor>1</factor>
    <min>0</min>
    <max>1</max>
  </animation>
+    
 
 </PropertyList>

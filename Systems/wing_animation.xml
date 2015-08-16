@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+
+<filter>
+  <type>noise-spike</type>
+  <max-rate-of-change>0.25</max-rate-of-change>
+  <input>BirdOfPrey/wing-fold-command</input>
+  <output>sim/multiplay/generic/float[1]</output>
+</filter>
+
+</PropertyList>
